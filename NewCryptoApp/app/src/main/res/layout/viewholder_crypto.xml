@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="85dp"
+    android:layout_marginVertical="8dp"
+    android:background="@drawable/grey_bg">
+
+    <ImageView
+        android:id="@+id/logoImg2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bitcoin" />
+
+    <TextView
+        android:id="@+id/cryptoNameText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="title"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/logoImg2"
+        app:layout_constraintTop_toTopOf="@+id/logoImg2" />
+
+    <TextView
+        android:id="@+id/cryptoPriceText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$0"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/logoImg2"
+        app:layout_constraintStart_toStartOf="@+id/cryptoNameText2" />
+
+    <TextView
+        android:id="@+id/cryptoPercentText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+10%"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/green"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/cryptoPriceText2"
+        app:layout_constraintStart_toEndOf="@+id/cryptoPriceText2"
+        app:layout_constraintTop_toTopOf="@+id/cryptoPriceText2" />
+
+    <com.majorik.sparklinelibrary.SparkLineLayout
+        android:id="@+id/sparkLineLayout2"
+        android:layout_width="90dp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/propertySizeText"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toEndOf="@+id/cryptoPercentText2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:s_line_color="#fed32c"
+        app:s_line_thickness="2dp"
+        app:s_marker_background_color="#fed32c"
+        app:s_marker_width="8dp">
+
+    </com.majorik.sparklinelibrary.SparkLineLayout>
+
+    <TextView
+        android:id="@+id/propertySizeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="0.15"
+        android:textColor="@color/white"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cryptoNameText2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/propertyAmountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$12"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/cryptoPercentText2"
+        app:layout_constraintEnd_toEndOf="@+id/propertySizeText"
+        app:layout_constraintStart_toStartOf="@+id/propertySizeText"
+        app:layout_constraintTop_toBottomOf="@+id/propertySizeText" />
+</androidx.constraintlayout.widget.ConstraintLayout>
